@@ -2,12 +2,21 @@
 
 # dependencies
 node_modules/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.pnp.*
 
 # Expo
 .expo/
 dist/
 web-build/
 expo-env.d.ts
+
+# EAS
+.eas/
 
 # Native
 .kotlin/
@@ -20,21 +29,52 @@ expo-env.d.ts
 
 # Metro
 .metro-health-check*
+.metro-cache/
 
-# debug
+# debug / logs
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.log
+logs/
+
+# testing
+coverage/
 
 # macOS
 .DS_Store
 *.pem
 
+# Windows / Linux
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+
 # local env files
+.env
+.env.*
+!.env.example
 .env*.local
 
 # typescript
 *.tsbuildinfo
+
+# caches
+.cache/
+.temp/
+.tmp/
+*.tgz
+.eslintcache
+
+# editors / IDEs
+.idea/
+*.iml
+*.swp
+*.swo
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 
 app-example
 
